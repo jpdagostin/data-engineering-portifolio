@@ -1,4 +1,4 @@
-AOS.init();
+// AOS.init();
 
 // Função para inicializar o site
 function initializeSite() {
