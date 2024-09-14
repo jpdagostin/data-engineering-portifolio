@@ -43,23 +43,14 @@ header {
     margin: 0 15px;
 }
 
-/* .navbar a {
+.navbar a {
     color: #b5e7a0; 
     text-decoration: none;
     font-size: 1.2rem;
     padding: 10px 15px;
     display: inline-block;
     transition: color 0.3s;
-} */
-
-.navbar {
-    background: #0f0f0f;
-    position: fixed;
-    width: 100%;
-    z-index: 1000; /* Esse valor já é adequado */
-    top: 0;
-    left: 0;
-}
+} 
 
 .navbar a:hover {
     color: #7fb47f; /* Cor ao passar o mouse */
