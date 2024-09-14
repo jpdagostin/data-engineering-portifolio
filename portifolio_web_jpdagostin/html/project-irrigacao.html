@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto - João D'Agostin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="C:\Users\Gobrax - ID 106\OneDrive\Documents\PERSONAL-WORK\portifolio_web_jpdagostin\css\projects.css">
+</head>
+
+<body>
+
+    <!-- Seção de Apresentação do Projeto -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>Projeto de Irrigação Automática com Arduino</h2>
+            <div class="project">
+                <img src="C:\Users\Gobrax - ID 106\OneDrive\Documents\PERSONAL-WORK\portifolio_web_jpdagostin\images\irriga.png" alt="Imagem do Projeto" class='project-image'>
+                <div class="project-description">
+                    <p><strong>Descrição do Projeto:</strong></p>
+                    <p>Este projeto foi desenvolvido com o objetivo de criar um sistema de irrigação automática para plantas utilizando o Arduino. O sistema era capaz de medir o nível de umidade do solo através de um sensor de umidade e, dependendo da leitura, acionava automaticamente a irrigação para manter a terra sempre úmida.</p>
+
+                    <p><strong>Tecnologias e Ferramentas Utilizadas:</strong></p>
+                    <ul>
+                        <li>Arduino (Microcontrolador principal)</li>
+                        <li>Sensor de Umidade do Solo (Para medir o nível de umidade da terra)</li>
+                        <li>Relé (Para acionar a bomba de água)</li>
+                        <li>Bomba de Água (Para irrigação das plantas)</li>
+                        <li>Componentes eletrônicos diversos (fios, resistores)</li>
+                    </ul>
+
+                    <p><strong>Funcionamento e Metodologia:</strong></p>
+                    <p>O sistema funcionava com um sensor de umidade do solo que monitorava o nível de umidade da terra ao redor da planta. Quando o nível de umidade caía abaixo de um valor pré-determinado, o Arduino acionava um relé que ligava a bomba de água, irrigando a planta até que o solo alcançasse a umidade ideal.</p>
+
+                    <p><strong>Etapas de Implementação:</strong></p>
+                    <ol>
+                        <li><strong>Montagem do Sistema:</strong> Os componentes eletrônicos, como o Arduino, o sensor de umidade e o relé, foram conectados para criar um circuito que monitorava a umidade e acionava a irrigação.</li>
+                        <li><strong>Configuração do Sensor de Umidade:</strong> O sensor foi calibrado para detectar diferentes níveis de umidade no solo. Com base nos valores recebidos, o Arduino tomava a decisão de ligar ou desligar a bomba de água.</li>
+                        <li><strong>Controle da Irrigação:</strong> O Arduino monitorava continuamente os valores do sensor e, ao detectar que a umidade estava abaixo de um limite, acionava o relé para ligar a bomba de água e irrigar a planta.</li>
+                    </ol>
+
+                    <p><strong>Comandos e Código Utilizado:</strong></p>
+                    <ul>
+                        <li><strong>Exemplo de Código Arduino para Controle da Irrigação:</strong>
+                            <pre><code>
+int sensorUmidadePin = A0;  // Pino do sensor de umidade
+int relePin = 8;            // Pino do relé para acionar a bomba de água
+int umidadeMinima = 400;    // Valor de referência para umidade mínima
+
+void setup() {
+  pinMode(relePin, OUTPUT);
+  Serial.begin(9600);  // Inicia a comunicação serial
+}
+
+void loop() {
+  int umidadeSolo = analogRead(sensorUmidadePin);  // Lê o valor do sensor de umidade
+  Serial.println(umidadeSolo);  // Exibe o valor no monitor serial
+
+  // Se a umidade estiver abaixo do limite, liga a bomba
+  if (umidadeSolo < umidadeMinima) {
+    digitalWrite(relePin, HIGH);  // Liga a bomba
+    Serial.println("Irrigando a planta...");
+  } else {
+    digitalWrite(relePin, LOW);   // Desliga a bomba
+    Serial.println("Solo úmido, bomba desligada.");
+  }
+
+  delay(1000);  // Aguarda 1 segundo antes da próxima leitura
+}
+                            </code></pre>
+                        </li>
+                    </ul>
+
+                    <p><strong>Desafios Enfrentados:</strong></p>
+                    <p>Um dos principais desafios foi a calibração correta do sensor de umidade, para garantir que ele pudesse detectar com precisão quando o solo estava seco o suficiente para requerer irrigação. Além disso, foi necessário garantir que o sistema fosse eficiente no controle da bomba de água para evitar desperdício de água ou irrigação excessiva.</p>
+
+                    <p><strong>Resultados:</strong></p>
+                    <p>O projeto foi bem-sucedido em criar um sistema de irrigação automático que monitorava o solo e irrigava as plantas quando necessário. O uso do Arduino permitiu um controle preciso e eficiente, mantendo as plantas saudáveis e economizando água. Esse projeto demonstrou a eficácia de combinar sensores com sistemas de automação para criar soluções sustentáveis.</p>                                   
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 João Pedro D'Agostin. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

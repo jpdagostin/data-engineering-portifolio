@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto - João D'Agostin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="C:\Users\Gobrax - ID 106\OneDrive\Documents\PERSONAL-WORK\portifolio_web_jpdagostin\css\projects.css">
+</head>
+
+<body>
+
+    <!-- Seção de Apresentação do Projeto -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>Projeto de Separação de Garrafas PET com Arduino</h2>
+            <div class="project">
+                <img src="C:\Users\Gobrax - ID 106\OneDrive\Documents\PERSONAL-WORK\portifolio_web_jpdagostin\images\esteira.png" alt="Imagem do Projeto" class='project-image'>
+                <div class="project-description">
+                    <p><strong>Descrição do Projeto:</strong></p>
+                    <p>Este projeto foi desenvolvido durante o ensino médio com o objetivo de criar uma esteira automatizada que separava garrafas PET por cor, utilizando materiais recicláveis. O projeto envolvia o uso de um Arduino e um solenoide para controlar a direção das garrafas, separando-as em dois compartimentos: um para garrafas verdes e outro para garrafas brancas.</p>
+
+                    <p><strong>Tecnologias e Ferramentas Utilizadas:</strong></p>
+                    <ul>
+                        <li>Arduino (Microcontrolador principal)</li>
+                        <li>Sensores de cor (Para identificar as garrafas PET)</li>
+                        <li>Solenoide (Para mudar a direção das garrafas)</li>
+                        <li>Componentes eletrônicos diversos (LEDs, resistores, fios)</li>
+                        <li>Materiais recicláveis (Para construção da esteira)</li>
+                    </ul>
+
+                    <p><strong>Funcionamento e Metodologia:</strong></p>
+                    <p>O projeto foi baseado em uma esteira motorizada onde as garrafas eram movidas uma a uma. Um sensor de cor, posicionado acima da esteira, identificava a cor da garrafa (verde ou branca). Após a identificação, um sinal era enviado ao Arduino, que controlava um solenoide responsável por desviar a garrafa para o compartimento correto.</p>
+
+                    <p><strong>Etapas de Implementação:</strong></p>
+                    <ol>
+                        <li><strong>Construção da Esteira:</strong> Utilizamos materiais recicláveis para criar a estrutura da esteira, e um motor foi acoplado para garantir o movimento contínuo das garrafas ao longo do sistema.</li>
+                        <li><strong>Detecção de Cor:</strong> Um sensor de cor foi instalado na parte superior da esteira para identificar a cor das garrafas. Este sensor lia a cor e enviava um sinal para o Arduino, que tomava a decisão sobre o direcionamento.</li>
+                        <li><strong>Controle do Solenoide:</strong> O Arduino recebia o sinal do sensor de cor e, com base nisso, acionava um solenoide que mudava a direção da garrafa. O solenoide redirecionava a garrafa para o lado correto, seja o compartimento de garrafas verdes ou brancas.</li>
+                    </ol>
+
+                    <p><strong>Comandos e Código Utilizado:</strong></p>
+                    <ul>
+                        <li><strong>Exemplo de Código Arduino para Controle da Esteira:</strong>
+                            <pre><code>
+int sensorCorPin = A0; // Entrada do sensor de cor
+int solenoidePin = 9;  // Controle do solenoide
+int motorEsteiraPin = 10; // Controle do motor da esteira
+
+void setup() {
+  pinMode(solenoidePin, OUTPUT);
+  pinMode(motorEsteiraPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int cor = analogRead(sensorCorPin); // Lê o valor do sensor de cor
+
+  // Lógica para determinar a cor da garrafa
+  if (cor > 500) {
+    // Garrafa branca
+    Serial.println("Garrafa Branca Detectada");
+    digitalWrite(solenoidePin, LOW);  // Solenoide não aciona, garrafa vai para o compartimento branco
+  } else {
+    // Garrafa verde
+    Serial.println("Garrafa Verde Detectada");
+    digitalWrite(solenoidePin, HIGH); // Solenoide aciona, garrafa vai para o compartimento verde
+  }
+
+  // Mantém a esteira ligada
+  digitalWrite(motorEsteiraPin, HIGH);
+  delay(1000);  // Aguarda 1 segundo para próxima garrafa
+}
+                            </code></pre>
+                        </li>
+                    </ul>
+
+                    <p><strong>Desafios Enfrentados:</strong></p>
+                    <p>O maior desafio foi garantir a precisão na detecção de cor, especialmente em ambientes com iluminação variável. Ajustes na calibração do sensor foram necessários para garantir que ele pudesse diferenciar corretamente entre garrafas verdes e brancas. Além disso, a integração do solenoide com o sistema de controle do Arduino exigiu um refinamento nos tempos de resposta para garantir que o redirecionamento das garrafas fosse feito corretamente.</p>
+
+                    <p><strong>Resultados:</strong></p>
+                    <p>O projeto foi bem-sucedido em separar as garrafas por cor, utilizando um sistema totalmente automatizado e feito com materiais recicláveis. O uso do Arduino permitiu um controle eficiente do solenoide e da esteira, garantindo a separação precisa de garrafas PET verdes e brancas. Esse projeto foi uma excelente introdução ao uso de microcontroladores e sistemas de automação.</p>                            
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 João Pedro D'Agostin. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

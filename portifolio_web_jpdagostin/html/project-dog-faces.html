@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto - João D'Agostin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="C:\Users\Gobrax - ID 106\OneDrive\Documents\PERSONAL-WORK\portifolio_web_jpdagostin\css\projects.css">
+</head>
+
+<body>
+
+    <!-- Seção de Apresentação do Projeto -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>Projeto de Reconhecimento Facial de Cachorros em Python</h2>
+            <div class="project">
+                <img src="C:\Users\Gobrax - ID 106\OneDrive\Documents\PERSONAL-WORK\portifolio_web_jpdagostin\images\dog.png" alt="Imagem do Projeto" class='project-image'>
+                <div class="project-description">
+                    <p><strong>Descrição do Projeto:</strong></p>
+                    <p>Este projeto foi desenvolvido com o objetivo de criar um modelo de aprendizado de máquina capaz de reconhecer a face de cachorros, utilizando imagens e vídeos capturados pela câmera do computador ou fotos carregadas. Usamos Python e bibliotecas como OpenCV e TensorFlow para treinar o modelo e implementar a detecção em tempo real.</p>
+
+                    <p><strong>Tecnologias e Ferramentas Utilizadas:</strong></p>
+                    <ul>
+                        <li>Python (Linguagem de programação principal)</li>
+                        <li>OpenCV (Biblioteca de visão computacional)</li>
+                        <li>TensorFlow (Biblioteca para aprendizado de máquina)</li>
+                        <li>Keras (API para construção de modelos de aprendizado de máquina)</li>
+                        <li>VSCode (Ambiente de desenvolvimento)</li>
+                    </ul>
+
+                    <p><strong>Funcionamento e Metodologia:</strong></p>
+                    <p>O modelo foi treinado utilizando uma base de dados de imagens de diferentes raças de cachorros, identificando suas faces e aprendendo as características específicas de cada um. A partir disso, o modelo foi capaz de reconhecer a face de um cachorro em tempo real ou ao analisar uma foto.</p>
+
+                    <p><strong>Etapas de Implementação:</strong></p>
+                    <ol>
+                        <li><strong>Coleta de Dados:</strong> Utilizamos imagens de diferentes raças de cachorros para treinar o modelo. As imagens foram processadas e pré-tratadas utilizando a biblioteca OpenCV, que permitiu a normalização dos dados e o ajuste das dimensões das imagens.</li>
+                        <li><strong>Treinamento do Modelo:</strong> O modelo foi treinado utilizando a biblioteca TensorFlow e a API Keras, implementando uma rede neural convolucional (CNN) para o reconhecimento facial. A CNN é ideal para tarefas de classificação de imagens, pois consegue identificar padrões em imagens, como as características faciais dos cachorros.</li>
+                        <li><strong>Detecção em Tempo Real:</strong> Após o treinamento, integramos o modelo com a câmera do computador utilizando o OpenCV, permitindo que o modelo identificasse a face de um cachorro em tempo real sempre que a câmera detectasse uma face.</li>
+                        <li><strong>Análise de Imagens:</strong> Além da detecção em tempo real, o modelo também foi configurado para receber imagens e realizar a detecção a partir de fotos carregadas pelo usuário, retornando a probabilidade de ser um cachorro e a possível raça, se aplicável.</li>
+                    </ol>
+
+                    <p><strong>Comandos e Bibliotecas Utilizadas:</strong></p>
+                    <ul>
+                        <li><strong>Instalação do OpenCV:</strong> 
+                            <pre><code>pip install opencv-python</code></pre>
+                        </li>
+                        <li><strong>Instalação do TensorFlow:</strong>
+                            <pre><code>pip install tensorflow</code></pre>
+                        </li>
+                        <li><strong>Exemplo de código para captura de vídeo e detecção facial:</strong>
+                            <pre><code>
+import cv2
+import tensorflow as tf
+
+# Carrega o modelo treinado
+model = tf.keras.models.load_model('dog_face_model.h5')
+
+# Inicia a captura de vídeo pela câmera
+cap = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    # Converte a imagem para escala de cinza
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    # Detecta faces no vídeo
+    faces = cv2.CascadeClassifier('haarcascade_frontalface_default.xml').detectMultiScale(gray, 1.3, 5)
+
+    for (x, y, w, h) in faces:
+        # Desenha um retângulo ao redor da face
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
+
+        # Prepara a imagem para o modelo
+        face_img = gray[y:y+h, x:x+w]
+        face_img = cv2.resize(face_img, (224, 224)) / 255.0
+        face_img = face_img.reshape(1, 224, 224, 1)
+
+        # Realiza a predição com o modelo treinado
+        prediction = model.predict(face_img)
+
+        # Exibe o resultado da detecção
+        if prediction > 0.5:
+            label = "Dog Detected"
+        else:
+            label = "No Dog"
+
+        cv2.putText(frame, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 255, 255), 2)
+
+    # Exibe o vídeo
+    cv2.imshow('Dog Face Detection', frame)
+
+    # Finaliza ao pressionar 'q'
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# Libera os recursos
+cap.release()
+cv2.destroyAllWindows()
+                            </code></pre>
+                        </li>
+                    </ul>
+
+                    <p><strong>Desafios Enfrentados:</strong></p>
+                    <p>O maior desafio foi ajustar o modelo para garantir que a detecção de cachorros fosse precisa em diferentes ambientes e condições de iluminação. Também foi necessário ajustar o desempenho do modelo para que funcionasse em tempo real, garantindo uma resposta rápida da câmera.</p>
+
+                    <p><strong>Resultados:</strong></p>
+                    <p>Conseguimos criar um modelo que identifica a face de cachorros com alta precisão, tanto em vídeos em tempo real quanto em fotos estáticas. O projeto foi uma excelente introdução ao uso de redes neurais convolucionais para classificação de imagens e permitiu a compreensão dos desafios envolvidos no processamento de imagens em tempo real.</p>                                 
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 João Pedro D'Agostin. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
