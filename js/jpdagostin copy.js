@@ -79,7 +79,7 @@ function changeLanguage(lang) {
         document.querySelectorAll('.navbar a')[1].textContent = 'Projects';
         document.querySelectorAll('.navbar a')[2].textContent = 'Contact';
 
-        document.querySelector('footer p').textContent = '© 2024 João Pedro D\'Agostin. All rights reserved.';
+        document.querySelector('footer p').textContent = '© 2024 João Pedro D/'Agostin. All rights reserved.';
     } else if (lang === 'es') {
         // Conteúdo em espanhol
         document.querySelector('#about h2').textContent = 'Sobre Mí';
@@ -107,7 +107,7 @@ function changeLanguage(lang) {
         document.querySelectorAll('.navbar a')[1].textContent = 'Proyectos';
         document.querySelectorAll('.navbar a')[2].textContent = 'Contacto';
 
-        document.querySelector('footer p').textContent = '© 2024 João Pedro D\'Agostin. Todos los derechos reservados.';
+        document.querySelector('footer p').textContent = '© 2024 João Pedro D/'Agostin. Todos los derechos reservados.';
     } else if (lang === 'pt') {
         // Conteúdo em português
         document.querySelector('#about h2').textContent = 'Sobre Mim';
@@ -135,7 +135,7 @@ function changeLanguage(lang) {
         document.querySelectorAll('.navbar a')[1].textContent = 'Projetos';
         document.querySelectorAll('.navbar a')[2].textContent = 'Contato';
 
-        document.querySelector('footer p').textContent = '© 2024 João Pedro D\'Agostin. Todos os direitos reservados.';
+        document.querySelector('footer p').textContent = '© 2024 João Pedro D/'Agostin. Todos os direitos reservados.';
     }
 }
 
