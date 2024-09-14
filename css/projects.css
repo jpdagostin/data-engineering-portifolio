@@ -74,7 +74,7 @@ header {
     max-width: 900px; /* Ampliado para exibir mais conteúdo */
     border-radius: 10px; /* Arredondamento das bordas */
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    /* animation: slideIn 2s ease-in-out; */
+    animation: slideIn 2s ease-in-out;
     transition: background 0.3s ease;
 }
 
