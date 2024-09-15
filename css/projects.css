@@ -210,6 +210,8 @@ footer {
 
 ol, ul {
     margin-left: 40px; /* Recuo para listas */
+    padding-left: 20px; /* Recuo confortável para listas */
+    margin-bottom: 15px; /* Espaçamento entre os itens da lista */
 }
 
 ol li, ul li {
@@ -254,8 +256,10 @@ pre {
     }
 
     .project {
-        width: 100%; /* Garante que o projeto ocupe toda a largura da tela */
-    }
+        overflow: visible; /* Permite que o conteúdo seja exibido corretamente */
+        width: 100%; /* Garante que ocupe a largura da tela */
+        max-width: 100%; /* Evita transbordar em telas pequenas */
+    }    
 
     .project-image {
         width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
