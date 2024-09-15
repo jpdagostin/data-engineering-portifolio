@@ -235,10 +235,10 @@ strong {
 }
 
 pre {
-    white-space: pre-wrap; /* Quebra de linha automática */
-    word-wrap: break-word; /* Quebra de palavra longa */
-    padding: 10px; /* Padding confortável para exibir o texto */
-    max-width: 100%; /* Garante que não ultrapasse a largura do contêiner */
+    white-space: pre-wrap; /* Permite que o texto do código seja quebrado */
+    word-wrap: break-word; /* Quebra palavras muito longas */
+    padding: 15px; /* Padding confortável para exibir o texto do código */
+    max-width: 100%; /* Garante que o código não ultrapasse a largura do contêiner */
     overflow-x: auto; /* Adiciona uma rolagem horizontal, se necessário */
 }
 
