@@ -56,13 +56,12 @@ function changeLanguage(lang) {
 
         projectsSection.querySelector('h2').textContent = 'Projects';
         projectsSection.querySelectorAll('.project h3')[0].textContent = 'PET ChromaSort';
-        projectsSection.querySelectorAll('.project h3')[1].textContent = 'CanineFace ID';
-        projectsSection.querySelectorAll('.project h3')[2].textContent = 'BudgetBnB Spy';
-        projectsSection.querySelectorAll('.project h3')[3].textContent = 'AI Explorers';
-        projectsSection.querySelectorAll('.project h3')[4].textContent = 'ReactCalc for iOS';
-        projectsSection.querySelectorAll('.project h3')[5].textContent = 'CryptoComms';
-        projectsSection.querySelectorAll('.project h3')[6].textContent = 'DataStructX';
-        projectsSection.querySelectorAll('.project h3')[7].textContent = 'HydroBot Irrigation System';
+        projectsSection.querySelectorAll('.project h3')[1].textContent = 'BudgetBnB Spy';
+        projectsSection.querySelectorAll('.project h3')[2].textContent = 'AI Explorers';
+        projectsSection.querySelectorAll('.project h3')[3].textContent = 'ReactCalc for iOS';
+        projectsSection.querySelectorAll('.project h3')[4].textContent = 'CryptoComms';
+        projectsSection.querySelectorAll('.project h3')[5].textContent = 'DataStructX';
+        projectsSection.querySelectorAll('.project h3')[6].textContent = 'HydroBot Irrigation System';
         projectsSection.querySelectorAll('.project .btn').forEach(btn => btn.textContent = 'View Project');
 
         contactSection.querySelector('h2').textContent = 'Contact';
@@ -87,13 +86,12 @@ function changeLanguage(lang) {
 
         projectsSection.querySelector('h2').textContent = 'Proyectos';
         projectsSection.querySelectorAll('.project h3')[0].textContent = 'Separador de Botellas PET';
-        projectsSection.querySelectorAll('.project h3')[1].textContent = 'ID de Rostros Caninos';
-        projectsSection.querySelectorAll('.project h3')[2].textContent = 'Espía de Precios Airbnb';
-        projectsSection.querySelectorAll('.project h3')[3].textContent = 'Exploradores de IA';
-        projectsSection.querySelectorAll('.project h3')[4].textContent = 'Calculadora React para iOS';
-        projectsSection.querySelectorAll('.project h3')[5].textContent = 'Comunicaciones Criptográficas';
-        projectsSection.querySelectorAll('.project h3')[6].textContent = 'Estructuras de Datos en Java y C';
-        projectsSection.querySelectorAll('.project h3')[7].textContent = 'Sistema de Irrigación Automático';
+        projectsSection.querySelectorAll('.project h3')[1].textContent = 'Espía de Precios Airbnb';
+        projectsSection.querySelectorAll('.project h3')[2].textContent = 'Exploradores de IA';
+        projectsSection.querySelectorAll('.project h3')[3].textContent = 'Calculadora React para iOS';
+        projectsSection.querySelectorAll('.project h3')[4].textContent = 'Comunicaciones Criptográficas';
+        projectsSection.querySelectorAll('.project h3')[5].textContent = 'Estructuras de Datos en Java y C';
+        projectsSection.querySelectorAll('.project h3')[6].textContent = 'Sistema de Irrigación Automático';
         projectsSection.querySelectorAll('.project .btn').forEach(btn => btn.textContent = 'Ver Proyecto');
 
         contactSection.querySelector('h2').textContent = 'Contacto';
@@ -118,13 +116,12 @@ function changeLanguage(lang) {
 
         projectsSection.querySelector('h2').textContent = 'Projetos';
         projectsSection.querySelectorAll('.project h3')[0].textContent = 'Separador de Garrafas PET';
-        projectsSection.querySelectorAll('.project h3')[1].textContent = 'Reconhecimento Facial de Cachorros';
-        projectsSection.querySelectorAll('.project h3')[2].textContent = 'Análise de Preços no Airbnb';
-        projectsSection.querySelectorAll('.project h3')[3].textContent = 'Exploradores de Inteligência Artificial';
-        projectsSection.querySelectorAll('.project h3')[4].textContent = 'Calculadora iOS Simples';
-        projectsSection.querySelectorAll('.project h3')[5].textContent = 'Comunicação Criptografada';
-        projectsSection.querySelectorAll('.project h3')[6].textContent = 'Estruturas de Dados em Java e C';
-        projectsSection.querySelectorAll('.project h3')[7].textContent = 'Sistema de Irrigação Automático';
+        projectsSection.querySelectorAll('.project h3')[1].textContent = 'Análise de Preços no Airbnb';
+        projectsSection.querySelectorAll('.project h3')[2].textContent = 'Exploradores de Inteligência Artificial';
+        projectsSection.querySelectorAll('.project h3')[3].textContent = 'Calculadora iOS Simples';
+        projectsSection.querySelectorAll('.project h3')[4].textContent = 'Comunicação Criptografada';
+        projectsSection.querySelectorAll('.project h3')[5].textContent = 'Estruturas de Dados em Java e C';
+        projectsSection.querySelectorAll('.project h3')[6].textContent = 'Sistema de Irrigação Automático';
         projectsSection.querySelectorAll('.project .btn').forEach(btn => btn.textContent = 'Ver Projeto');
 
         contactSection.querySelector('h2').textContent = 'Contato';
