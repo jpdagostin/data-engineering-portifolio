@@ -222,6 +222,11 @@ strong {
     color: #b5e7a0; /* Mantém o verde claro no negrito */
 }
 
+pre {
+    white-space: pre-wrap; /* Quebra o conteúdo para caber dentro do contêiner */
+    word-wrap: break-word; /* Quebra automaticamente em palavras longas */
+}
+
 /* Animação para as seções */
 @keyframes slideIn {
     from {
