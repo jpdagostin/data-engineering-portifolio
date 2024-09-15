@@ -248,3 +248,59 @@ strong {
         width: 100%;
     }
 }
+
+/* Ajustes para tablets */
+@media (max-width: 1024px) {
+    .project-image {
+        max-width: 80%; /* Reduz um pouco o tamanho da imagem em tablets */
+        height: auto;
+    }
+
+    .about-content, .project-description {
+        font-size: 1rem; /* Reduz um pouco o tamanho da fonte */
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Ajustes para smartphones */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .about, .projects, .contact {
+        padding: 20px;
+        max-width: 95%; /* Preenche quase toda a largura do dispositivo */
+    }
+
+    .project-image {
+        width: 100%;
+    }
+
+    .about-content, .project-description {
+        font-size: 0.9rem; /* Reduz ainda mais o tamanho da fonte para telas menores */
+    }
+
+    h2 {
+        font-size: 1.6rem; /* Ajusta o tamanho do título para smartphones */
+    }
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .project-image {
+        max-width: 100%;
+    }
+
+    .about-content, .project-description {
+        font-size: 0.8rem;
+    }
+}
+

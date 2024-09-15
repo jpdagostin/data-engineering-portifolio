@@ -266,3 +266,87 @@ footer {
     z-index: 1; /* Traz a imagem para a frente */
     margin: 10px; /* Adiciona espaçamento ao redor da imagem para evitar sobreposição */
 }
+
+/* Estilos para tablets */
+@media (max-width: 1024px) {
+    .navbar a {
+        font-size: 1rem;
+    }
+
+    .profile-pic {
+        width: 250px;
+        height: 250px;
+    }
+
+    .project {
+        width: calc(100% - 40px); /* Deixa os projetos em coluna única */
+    }
+}
+
+/* Estilos para smartphones */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .about, .projects, .contact {
+        padding: 20px;
+    }
+
+    .skills {
+        gap: 5px;
+    }
+
+    .skill-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .project {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-logo {
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 8px 10px;
+    }
+}
+
+/* Estilos para telas menores */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
