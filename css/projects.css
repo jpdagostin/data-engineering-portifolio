@@ -239,45 +239,17 @@ strong {
     }
 
     .about, .projects, .contact {
-        padding: 30px;
-        max-width: 90%;
-    }
-
-    .project-image {
-        height: auto;
-        width: 100%;
-    }
-}
-
-/* Ajustes para tablets */
-@media (max-width: 1024px) {
-    .project-image {
-        max-width: 80%; /* Reduz um pouco o tamanho da imagem em tablets */
-        height: auto;
-    }
-
-    .about-content, .project-description {
-        font-size: 1rem; /* Reduz um pouco o tamanho da fonte */
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-}
-
-/* Ajustes para smartphones */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-    }
-
-    .about, .projects, .contact {
         padding: 20px;
         max-width: 95%; /* Preenche quase toda a largura do dispositivo */
     }
 
+    .project {
+        width: 100%; /* Garante que o projeto ocupe toda a largura da tela */
+    }
+
     .project-image {
-        width: 100%;
+        width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+        height: auto;
     }
 
     .about-content, .project-description {
@@ -296,11 +268,17 @@ strong {
     }
 
     .project-image {
-        max-width: 100%;
+        max-width: 100%; /* Garante que a imagem ocupe toda a largura da tela */
+    }
+
+    .project-description {
+        max-width: 100%; /* Garante que a descrição do projeto se ajuste à tela */
+        font-size: 0.8rem;
+        padding: 10px;
     }
 
     .about-content, .project-description {
         font-size: 0.8rem;
+        padding: 10px; /* Diminui o padding em telas menores */
     }
 }
-
