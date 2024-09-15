@@ -240,7 +240,7 @@ strong {
 
     .about, .projects, .contact {
         padding: 20px;
-        max-width: 95%; /* Preenche quase toda a largura do dispositivo */
+        max-width: 100%; /* Preenche toda a largura do dispositivo */
     }
 
     .project {
@@ -250,10 +250,12 @@ strong {
     .project-image {
         width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
         height: auto;
+        max-width: 100%; /* Evita que a imagem ultrapasse a largura da tela */
     }
 
     .about-content, .project-description {
-        font-size: 0.9rem; /* Reduz ainda mais o tamanho da fonte para telas menores */
+        padding: 10px;
+        font-size: 0.9rem; /* Reduz o tamanho da fonte para telas menores */
     }
 
     h2 {
@@ -261,24 +263,22 @@ strong {
     }
 }
 
-/* Ajustes para telas menores */
 @media (max-width: 480px) {
     h2 {
-        font-size: 1.4rem;
+        font-size: 1.2rem; /* Ajuste de título para telas muito pequenas */
     }
 
     .project-image {
         max-width: 100%; /* Garante que a imagem ocupe toda a largura da tela */
     }
 
-    .project-description {
-        max-width: 100%; /* Garante que a descrição do projeto se ajuste à tela */
-        font-size: 0.8rem;
-        padding: 10px;
+    .about-content, .project-description {
+        padding: 5px; /* Diminui o padding em telas menores */
+        font-size: 0.8rem; /* Reduz ainda mais o tamanho da fonte para smartphones */
     }
 
-    .about-content, .project-description {
-        font-size: 0.8rem;
-        padding: 10px; /* Diminui o padding em telas menores */
+    .project-description {
+        font-size: 0.75rem;
+        padding: 5px; /* Ajuste adicional no padding */
     }
 }
